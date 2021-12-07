@@ -4,4 +4,4 @@ Within this repository are a range of guides that will support the development o
 ## Feedback
 Please do not hesitate to get in touch if you have any feedback on ways we can improve this repository.
 * The New Zealand PEPPOL Authority - [support@nzpeppol.govt.nz](mailto:support@nzpeppol.govt.nz)
-* The Australian Peppol Authority - [einvoicing@ato.gov.au](mailto:einvoicing@ato.gov.au7)
+* The Australian Peppol Authority - [einvoicing@ato.gov.au](mailto:einvoicing@ato.gov.au)
