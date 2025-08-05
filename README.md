@@ -1,4 +1,4 @@
-# Guidance documents
+
 Within this Site are a range of guides that will support the development of an A-NZ compliant Peppol Access Point or Service Metadata Publisher. 
 
 # A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE
