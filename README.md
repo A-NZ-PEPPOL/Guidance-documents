@@ -2,6 +2,7 @@
 ## Contents
 
 - [Including WET and LCT on an Invoice](https://a-nz-peppol.github.io/Guidance-documents/#background)
+- [Feedback](https://a-nz-peppol.github.io/Guidance-documents/#feedback)
 
 
 Within this Site are a range of guides that will support the development of an A-NZ compliant Peppol Access Point or Service Metadata Publisher. 
