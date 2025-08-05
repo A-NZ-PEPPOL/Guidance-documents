@@ -6,7 +6,7 @@ Within this Site are a range of guides that will support the development of an A
 # Including WET and LCT on an Invoice  
 **Guidance Note 01**
 
-📄 Download the Word version from [here](https://github.com/A-NZ-PEPPOL/Guidance-documents/raw)
+📄 Download the Word version from [here](https://github.com/A-NZ-PEPPOL/Guidance-documents/raw](https://github.com/A-NZ-PEPPOL/Guidance-documents/raw/refs/heads/Dev-GN-2025/GuidanceNote01_WETandLCT_v1.0.2.docx))
 
 | Issue Date       | Version |
 |------------------|---------|
