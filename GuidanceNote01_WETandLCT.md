@@ -16,17 +16,14 @@
 ---
 
 ## Background  
-The purpose of this document is to provide guidance on how sending and receiving businesses should manage **Wine Equalisation Tax (WET)** and **Luxury Car Tax (LCT)** information in Australia using the invoice syntax in the **PINT A-NZ specifications (Billing & Self-billing)**.
+The purpose of this document is to provide guidance on how sending and receiving businesses should manage **Wine Equalisation Tax (WET)** and **Luxury Car Tax (LCT)** information in Australia using the invoice syntax in the **[PINT A-NZ](https://docs.peppol.eu/poac/aunz/) specifications (Billing & Self-billing)**.
 
 ---
 
 ## Issue  
-PINT A-NZ specifications support one tax scheme: **Goods and Services Tax (GST)**. However, in Australia, two other types of tax may appear on an invoice in addition to GST:
+PINT A-NZ specifications support one tax scheme: **Goods and Services Tax (GST)**. However, in Australia, two other types of tax may appear on an invoice in addition to GST: **Wine Equalisation Tax ([WET](https://www.ato.gov.au/business/wine-equalisation-tax/))** and **Luxury Car Tax ([LCT](https://www.ato.gov.au/Business/Business-activity-statements-(BAS)/Luxury-car-tax-(LCT)/))**
 
-- **Wine Equalisation Tax (WET)**
-- **Luxury Car Tax (LCT)**
-
-### Key Differences Between WET and LCT:
+The key differences between WET and LCT include:
 
 - GST applies to **WET-inclusive** amounts, but **LCT-exclusive** amounts.
 - LCT calculations require the **threshold and indexation**, which may update annually.
@@ -45,12 +42,12 @@ The proposed approach does **not affect** the PINT A-NZ specifications but aims 
 
 The WET amount can be displayed as an additional charge for the relative wine item, using the UBL element:
 
-`cac:InvoiceLine/cac:AllowanceCharge/cbc:Amount (IBT-141)`
+`cac:InvoiceLine/cac:AllowanceCharge/cbc:Amount` ([IBT-141](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-141/)).
 
 To specify the additional charge is for WET, it is recommended to :
 
-- Use `"ZZZ"` for `cbc:AllowanceChargeReasonCode (IBT-140)`
-- Include `"WET"` in `cbc:AllowanceChargeReason (IBT-139)`
+- Use `"ZZZ"` for `cbc:AllowanceChargeReasonCode` ([IBT-140](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-140/))
+- Include `"WET"` in `cbc:AllowanceChargeReason` ([IBT-139](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-139/)).
 
 This approach ensures the applied WET amounts are associated with the related wine sales.
 
@@ -62,14 +59,14 @@ This approach ensures the applied WET amounts are associated with the related wi
 
 The LCT amount, and other applicable charges (such as stamp duty, registration fee, and vehicle insurance fee), should each be displayed using an additional line:
 
-- Put the amount in `cac:InvoiceLine/cbc:LineExtensionAmount (IBT-131)`
-- Use `cac:InvoiceLine/cbc:Note (IBT-127)` to describe the amount included in the invoice line, e.g. `"LCT"`
+- Put the amount in `cac:InvoiceLine/cbc:LineExtensionAmount` ([IBT-131](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-131/)).
+- Use `cac:InvoiceLine/cbc:Note` ([IBT-127](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-127/)) to describe the amount included in the invoice line, e.g. LCT.
 - For LCT and other charges where GST is not applicable:
   - Use `"GST"` as the tax scheme
-  - Use code `"E"` (exempt from tax) in `cac:ClassifiedTaxCategory (IBG-30)`
-- It is recommended to use `"ZZZ"` from the UNCL7143 item type identification code list for:
-  `cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode (IBT-158)`
-  to assist with automation of the processing of LCT
+  - Use code `"E"` (exempt from tax) in `cac:ClassifiedTaxCategory` ([IBG-30](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibg-30/)).
+- It is recommended to use `"ZZZ"` from the [UNCL7143](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/codelist/UNCL7143/) item type identification code list for:
+  `cac:InvoiceLine/cac:Item/cac:CommodityClassification/cbc:ItemClassificationCode` ([IBT-158](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-158/))
+  to assist with automation of the processing of LCT.
 
 📎 Refer to **Appendix 2** for detailed examples.
 
@@ -272,3 +269,13 @@ The LCT amount, and other applicable charges (such as stamp duty, registration f
 </cac:InvoiceLine>
 </Invoice>
 ```
+
+---
+
+## Version History
+
+| Version | Date       | Change Description |
+|---------|------------|--------------------|
+| 1.0     | 08/10/2019 | Initial published version |
+| 1.0.1   | 06/02/2020 | Correction of LCT example (Appendix B)<br> Use "ZZZ" as ItemClassificationCode<br> Improve AccountingCost exemplars |
+| 1.0.2   | 09/02/2024 | Updated artefact references to the PINT A-NZ specification<br> Editorial changes for clarification |
