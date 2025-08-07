@@ -3,6 +3,7 @@
 Within this site are a range of guides that will support the development of an A-NZ compliant Peppol Access Point or Service Metadata Publisher. 
 
 - [Including WET and LCT on an Invoice](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote01_WETandLCT)
+- [Payment means and use of the UNCL4461 code list](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote02_Payment%20Means%20Code)
 
 
 
