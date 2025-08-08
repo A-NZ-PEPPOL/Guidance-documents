@@ -3,8 +3,9 @@
   <img src="header.jpg" alt="Header Image" width="100%">
 </p>
 
+# Welcome to the A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE Hub
 
-Within this site are a range of guides that will support the development of an A-NZ compliant Peppol Access Point or Service Metadata Publisher. 
+This site provides a set of guides to support the development of Peppol Access Points and Service Metadata Publishers in alignment with Australian and New Zealand (A-NZ) compliance requirements.
 
 - [Including WET and LCT on an Invoice](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote01_WETandLCT)
 - [Payment means and use of the UNCL4461 code list](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote02_Payment%20Means%20Code)
