@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="header.jpg" alt="Header Image" width="100%">
+</p>
+
 # A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE
 
 # Including WET and LCT on an Invoice  
