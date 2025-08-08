@@ -1,11 +1,13 @@
 <p align="center">
-  <img src="header.jpg" alt="Header Image" width="100%">
+  <img src="assets/header.jpg" alt="Header Image" width="100%">
 </p>
 
 # A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE
 
 # Payment means and use of the UNCL4461 code list
 **Guidance Note 02**
+
+📄 Download the Word version from [here](https://github.com/A-NZ-PEPPOL/Guidance-documents/raw/refs/heads/Dev-GN-2025/GuidanceNote02_Payment%20Means%20Code_1.5.docx)
 
 | Issue Date   | Version |
 |--------------|---------|
