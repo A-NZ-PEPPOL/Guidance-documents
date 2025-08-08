@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="header.jpg" alt="Header Image" width="100%">
+  <img src="assets/header.jpg" alt="Header Image" width="100%">
 </p>
 
 # Welcome to the A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE Hub
