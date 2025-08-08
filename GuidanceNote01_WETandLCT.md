@@ -145,6 +145,7 @@ The LCT amount, and other applicable charges (such as stamp duty, registration f
 ## Appendix B – Luxury Car Tax
 
 ### Scenario:
+
 | Car Price | Quantity | *Threshold | *LCT Taxable Amount | LCT Amount |
 |-----------|----------|------------|---------------------|------------|
 | \$100,000 | 1        | \$75,526   | (100k - 75,526) × 10/11 = \$22,249.10 | \$7,342.20 |
