@@ -1,7 +1,6 @@
-
-<p align="center">
-  <img src="header.jpg" alt="Header Image" width="100%">
-</p>
+```html
+<img src="assets/header.jpg" alt="Header Image" style="width:100%; height:auto; display:block; margin:0 auto;">
+```
 
 # Welcome to the A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE Hub
 
