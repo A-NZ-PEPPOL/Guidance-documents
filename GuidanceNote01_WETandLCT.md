@@ -78,6 +78,7 @@ The LCT amount, and other applicable charges (such as stamp duty, registration f
 ## Appendix A – Wine Equalisation Tax Example
 
 ### Scenario:
+
 | Wine price per item | Quantity | WET amount (29%) | GST (10% of WET inclusive amount) |
 |---------------------|----------|------------------|-----------------------------------|
 | \$500               | 4        | \$580            | \$258                             |
