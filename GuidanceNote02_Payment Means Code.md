@@ -96,3 +96,58 @@ The following example demonstrates how the PINT A-NZ data model can be used to c
 
 ---
 
+## Australia:
+
+|   |   |
+|---|---|
+| **PaymentMeans**                                                     |                                          |
+| **PaymentMeans/PaymentMeansCode**                                    | 30                                              |
+| **PaymentMeans/PaymentMeansCode/@name**                              | Credit transfer                                 |
+| **PaymentMeans/PaymentID**                                           | 88827661226 (_customer/payment reference number_) |
+| **PaymentMeans/PayeeFinancialAccount/ID**                            | 324875423 (_account number_)                    |
+| **PaymentMeans/PayeeFinancialAccount/Name**                          | ABC Ltd. (_account name_)                       |
+| **PaymentMeans/PayeeFinancialAccount/FinancialInstitutionBranch/ID** | 205536 (_BSB_)                                  |
+
+
+```xml
+<cac:PaymentMeans><!-- Domestic credit transfer -->
+  <cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
+  <cbc:PaymentID>88827661226</cbc:PaymentID><!-- customer reference number -->
+  <cac:PayeeFinancialAccount>
+    <cbc:ID>324875423</cbc:ID><!-- Bank account number -->
+    <cbc:Name>ABC Ltd.</cbc:Name><!-- Account name -->
+    <cac:FinancialInstitutionBranch>
+      <cbc:ID>205536</cbc:ID><!-- Bank state branch -->
+    </cac:FinancialInstitutionBranch>
+  </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+```
+
+
+## New Zealand
+
+In New Zealand, it is common business practice to provide the combined bank account details (Bank, Branch, Account Number, Suffix), shown as a 16-digit number.
+
+|   |   |
+|---|---|
+| **PaymentMeans**                          | 30                                              |
+| **PaymentMeans/PaymentMeansCode**                                    | 30                                              |
+| **PaymentMeans/PaymentMeansCode/@name**                              | Credit transfer                                 |
+| **PaymentMeans/PaymentID**                                           | 88827661226 (_customer/payment reference number_) |
+| **PaymentMeans/PayeeFinancialAccount/ID**                            | 0205000632487000 (_Combined NZ Bank/Branch/Account number, Suffix_) |
+| **PaymentMeans/PayeeFinancialAccount/Name**                          | ABC Ltd. (_account name_)                       |
+
+```xml
+<cac:PaymentMeans><!-- Direct Debit -->
+  <cbc:PaymentMeansCode name="Direct debit">49</cbc:PaymentMeansCode>
+  <cbc:PaymentID>88827661226</cbc:PaymentID><!-- customer reference number -->
+  <cac:PaymentMandate>
+    <cbc:ID>324875423</cbc:ID><!-- direct debit authority reference -->
+    <cac:PayerFinancialAccount>
+      <cbc:ID>324875423</cbc:ID><!-- Account number -->
+    </cac:PayerFinancialAccount>
+  </cac:PaymentMandate>
+</cac:PaymentMeans>
+
+```
+
