@@ -130,7 +130,7 @@ In New Zealand, it is common business practice to provide the combined bank acco
 
 |   |   |
 |---|---|
-| **PaymentMeans**                          | 30                                              |
+| **PaymentMeans**                          |                                               |
 | **PaymentMeans/PaymentMeansCode**                                    | 30                                              |
 | **PaymentMeans/PaymentMeansCode/@name**                              | Credit transfer                                 |
 | **PaymentMeans/PaymentID**                                           | 88827661226 (_customer/payment reference number_) |
