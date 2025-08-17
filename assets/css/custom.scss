@@ -1,28 +1,87 @@
-/* Hide the default site title since we use an image header */
-.site-title {
+/* === ATO-style Custom Styling for Just the Docs === */
+
+/* Hide the default site title in the header */
+.site-header .site-title {
   display: none;
 }
- 
-/* Add spacing below header image */
+
+/* Add spacing and border below header image */
 .site-header img {
   margin-bottom: 20px;
   border-bottom: 3px solid #004785; /* ATO-style blue */
 }
- 
+
 /* Style page headings */
 h1, h2, h3 {
   color: #004785; /* professional dark blue */
 }
 
-// Move search bar under the title
-.search {
-  position: absolute;
-  top: 3.5rem;  // pushes it below the title
-  left: 1rem;   // aligns under title
-  width: 250px; // optional: adjust width
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #004785;
+  padding-bottom: 0.5rem;
 }
- 
-// Push page content down to avoid overlap
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+/* Push page content down to avoid overlap */
 .main-content {
   margin-top: 4rem;
+}
+
+/* Sidebar styling */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem; /* Push sidebar content down */
+}
+
+/* Move sidebar title down */
+.sidebar .site-title {
+  padding-top: 1rem;
+  display: block;
+}
+
+/* Move search bar to sidebar */
+.sidebar .search {
+  order: 2;
+  position: static;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+/* ATO-style link colors */
+a {
+  color: #004785;
+}
+
+a:hover {
+  color: #002d5c;
+  text-decoration: underline;
+}
+
+/* ATO-style sidebar nav */
+.nav-list .nav-list-item {
+  border-left: 3px solid #004785;
+  padding-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar .search {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .main-content {
+    margin-top: 2rem;
+  }
 }
