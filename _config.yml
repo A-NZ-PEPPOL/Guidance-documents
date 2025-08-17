@@ -1,0 +1,14 @@
+title: A-NZ Peppol Guidance Documents
+description: >-
+  This site provides a range of guides to support the development of
+  an A-NZ compliant Peppol Access Point or Service Metadata Publisher.
+theme: just-the-docs
+ 
+# Navigation (will show in sidebar/top depending on theme)
+nav:
+  - title: Home
+    url: /
+  - title: Guidance Note 1
+    url: /GuidanceNote01_WETandLCT.html
+  - title: Guidance Note 2
+    url: /GuidanceNote02_PaymentMeans.html
