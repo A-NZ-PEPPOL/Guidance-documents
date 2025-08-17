@@ -12,7 +12,7 @@ sass:
 # Point to the custom CSS
 just_the_docs:
   css:
-    - assets/css/custom.scss
+    - assets/css/custom.css
 
 # Navigation (will show in sidebar/top depending on theme)
 nav:
