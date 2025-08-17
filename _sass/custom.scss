@@ -1,0 +1,15 @@
+/* Hide the default site title since we use an image header */
+.site-title {
+  display: none;
+}
+ 
+/* Add spacing below header image */
+.site-header img {
+  margin-bottom: 20px;
+  border-bottom: 3px solid #004785; /* ATO-style blue */
+}
+ 
+/* Style page headings */
+h1, h2, h3 {
+  color: #004785; /* professional dark blue */
+}
