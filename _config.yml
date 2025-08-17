@@ -12,7 +12,7 @@ just_the_docs:
     "GitHub Repository":
       - "https://github.com/A-NZ-PEPPOL/Guidance-documents"
   css:
-    - "/assets/css/custom.scss"
+    - assets/css/custom.scss
 
 # Navigation (will show in sidebar/top depending on theme)
 nav:
