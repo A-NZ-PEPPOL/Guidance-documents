@@ -1,4 +1,4 @@
-title: A-NZ Peppol Guidance Documents
+title: Home
 description: >
   This site provides a range of guides to support the development of
   an A-NZ compliant Peppol Access Point or Service Metadata Publisher.
@@ -17,7 +17,7 @@ just_the_docs:
 # Navigation (will show in sidebar/top depending on theme)
 nav:
   - title: Home
-    url: /
+    url: /README
   - title: Guidance Note 1
     url: /GuidanceNote01_WETandLCT
   - title: Guidance Note 2
