@@ -17,7 +17,7 @@ just_the_docs:
 # Navigation (will show in sidebar/top depending on theme)
 nav:
   - title: Home
-    url: /README
+    url: /
   - title: Guidance Note 1
     url: /GuidanceNote01_WETandLCT
   - title: Guidance Note 2
