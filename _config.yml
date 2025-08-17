@@ -11,9 +11,6 @@ sass:
 
 # Point to the custom CSS
 just_the_docs:
-  aux_links: # optional, for top right menu
-    "GitHub Repository":
-      - "https://github.com/A-NZ-PEPPOL/Guidance-documents"
   css:
     - assets/css/custom.scss
 
