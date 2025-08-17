@@ -1,3 +1,6 @@
+---
+title: Home
+---
 <p align="center">
   <img src="assets/header.jpg" alt="Header Image" width="100%">
 </p>
