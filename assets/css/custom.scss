@@ -13,3 +13,16 @@
 h1, h2, h3 {
   color: #004785; /* professional dark blue */
 }
+
+// Move search bar under the title
+.search {
+  position: absolute;
+  top: 3.5rem;  // pushes it below the title
+  left: 1rem;   // aligns under title
+  width: 250px; // optional: adjust width
+}
+ 
+// Push page content down to avoid overlap
+.main-content {
+  margin-top: 4rem;
+}
