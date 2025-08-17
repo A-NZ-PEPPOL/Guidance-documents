@@ -2,7 +2,9 @@ title: A-NZ Peppol Guidance Documents
 description: >-
   This site provides a range of guides to support the development of
   an A-NZ compliant Peppol Access Point or Service Metadata Publisher.
-theme: just-the-docs
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
  
 # Navigation (will show in sidebar/top depending on theme)
 nav:
