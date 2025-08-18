@@ -1,14 +1,12 @@
-title: A-NZ Peppol Guidance Documents
+title: A-NZ Guidance Documents
 description: >
   This site provides a range of guides to support the development of
   an A-NZ compliant Peppol Access Point or Service Metadata Publisher.
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
-
 sass:
   style: expanded
-
 # Point to the custom CSS
 just_the_docs:
   css:
