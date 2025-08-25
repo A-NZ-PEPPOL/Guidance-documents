@@ -8,6 +8,7 @@ This site provides a set of guides to support the development of Peppol Access P
 
 - [Including WET and LCT on an Invoice](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote01_WETandLCT)
 - [Payment means and use of the UNCL4461 code list](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote02_Payment%20Means%20Code)
+- [A-NZ Information Security Guidance for e-Invoicing Service Providers](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote03_Information%20Security_v1.0.html)
 
 
 ## Feedback
