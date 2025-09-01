@@ -1,5 +1,5 @@
 ---
-title: "Guidance Note 3"
+title: "GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers"
 layout: default
 ---
 
@@ -9,7 +9,7 @@ layout: default
 
 # A-NZ PEPPOL FRAMEWORK GUIDANCE NOTE
 
-## A-NZ Information Security Guidance for e-Invoicing Service Providers  
+# A-NZ Information Security Guidance for e-Invoicing Service Providers  
 **Guidance Note 03**
 
 📄 Download the Word version from [here](https://github.com/A-NZ-PEPPOL/Guidance-documents/raw/refs/heads/Dev-GN-2025/GuidanceNote03_InformationSecurity_v1.0.docx)
@@ -24,7 +24,7 @@ layout: default
 
 ---
 
-### Introduction 
+## Introduction 
 
 The European PEPPOL framework has been formally adopted by both the New
 Zealand and Australian governments for e-Invoicing. The framework will
@@ -47,7 +47,7 @@ the media, a loss of stakeholder confidence in the e-Invoicing process
 and poor uptake of e-Invoicing by businesses due to the perceived
 risks.*
 
-### Scope
+## Scope
 
 The A-NZ Information Security Program applies to all e-Invoicing service
 providers, that provide (or are seeking to provide) Access Point and/or
@@ -58,7 +58,7 @@ the scope of the information security program to relevant policies,
 procedures and systems of the business unit responsible for the
 e-Invoicing Access Point / Service Metadata Publisher service.
 
-### Objectives 
+## Objectives 
 
 The Information Security is a collective obligation of the PEPPOL
 Service Providers and the A-NZ PEPPOL Authorities.
@@ -73,7 +73,7 @@ This Information security guidance has below collective objectives
 
 - Apply PEPPOL regulatory compliance
 
-### Key Requirements
+## Key Requirements
 
 Section 2.1 of the Annex 5 within the Transport Infrastructure
 Agreement, requires *PEPPOL SMP and AP Providers must comply with any
@@ -159,11 +159,11 @@ multi-factor authentication.</td>
 </tbody>
 </table>
 
-### Further Guidance
+## Further Guidance
 
-#### Self-certification or independent certification against either ISO/IEC 27001 or ASD ISM/NZ ISM
+### Self-certification or independent certification against either ISO/IEC 27001 or ASD ISM/NZ ISM
 
-##### **Self- certification**
+#### **Self- certification**
 
 The self-certification requirement seeks to provide the PEPPOL Authority
 with a level of assurance that Service Providers have robust security
@@ -218,7 +218,7 @@ standards including comments on why certain controls may or may not be
 applicable to Service Provider and how controls that do apply are
 addressed by Service Provider
 
-#### Independent Certification
+### Independent Certification
 
 The independent certification requirement seeks to provide the A-NZ
 PEPPOL Authority with a level of assurance that Service Providers have
@@ -286,7 +286,7 @@ Evidence required
 
 - Copy of certificate upon completion of independent certification
 
-#### Encryption at rest
+### Encryption at rest
 
 This requirement seeks to protect e-Invoicing related information from
 unauthorised access.
@@ -324,7 +324,7 @@ These **must** include:
 - Isolation of/and handling procedures for sensitive data (ie invoice
   data) including restrictions such as ‘need to know’ principles.
 
-#### Security monitoring practices
+### Security monitoring practices
 
 This requirement seeks to detect and respond to cyber-attacks, channel
 misuse and business threats. Monitoring is a joint responsibility
@@ -360,7 +360,7 @@ Transaction (data) layer – relevant combinations of:
 
 - Screenshots of an anomaly detection system.
 
-#### Encryption in transit for all e-Invoicing information (business documents) sent and received by an Access Point
+### Encryption in transit for all e-Invoicing information (business documents) sent and received by an Access Point
 
 This requirement seeks to protect the confidentiality and integrity of
 information in transit.
@@ -383,7 +383,7 @@ Screenshot of one or more of the below:
 
 - TLS handshake protocol being enforced.
 
-#### Multifactor authentication
+### Multifactor authentication
 
 This requirement seeks to minimise the opportunity for unauthorised
 users to client related information.
