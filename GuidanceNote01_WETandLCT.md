@@ -1,5 +1,5 @@
 ---
-title: Guidance Note 1
+title: GN1_Including WET and LCT on an Invoice
 ---
 
 <p align="center">
