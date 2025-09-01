@@ -1,5 +1,5 @@
 ---
-title: GN2: Payment means and use of the UNCL4461 code list
+title: GN2_Payment means and use of the UNCL4461 code list
 ---
 
 <p align="center">
