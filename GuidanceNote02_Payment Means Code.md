@@ -1,5 +1,5 @@
 ---
-title: Guidance Note 2
+title: GN2: Payment means and use of the UNCL4461 code list
 ---
 
 <p align="center">
@@ -45,11 +45,11 @@ The recommended solution, described in the sections below, explains how to utili
 
 The PINT A-NZ specifications include the following fields for Payment Means:
 
-| ID      | Lvl | Attribute name                    | Cardinality | Description                                                                                      |
-|---------|-----|---------------------------------|-------------|------------------------------------------------------------------------------------------------|
-| IBG-16  | 1   | [cac:PaymentMeans](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibg-16/)                 | 0..n        | A group of business terms providing information about the payment.                             |
-| IBT-081 | 2   | [cbc:PaymentMeansCode](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-081/)             | 1..1        | The means, expressed as code, for how a payment is expected to be or has been settled.          |
-| IBT-082 | 3   | [@name](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-082/)                           | O           | The means, expressed as text, for how a payment is expected to be or has been settled.          |
+| ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;            | Lvl | Attribute name                    | Cardinality | Description                                                                                      |
+|------------|-----|---------------------------------|-------------|------------------------------------------------------------------------------------------------|
+| IBG-16    | 1   | [cac:PaymentMeans](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibg-16/)                 | 0..n        | A group of business terms providing information about the payment.                             |
+| IBT-081   | 2   | [cbc:PaymentMeansCode](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-081/)             | 1..1        | The means, expressed as code, for how a payment is expected to be or has been settled.          |
+| IBT-082   | 3   | [@name](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-082/)                           | O           | The means, expressed as text, for how a payment is expected to be or has been settled.          |
 | IBT-083 | 2   | [cbc:PaymentID](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-083/)                   | 0..1        | A textual value used to establish a link between the payment and the Invoice, issued by the Seller. Used for creditor's critical reconciliation information. This information element helps the Seller to assign an incoming payment to the relevant payment process. |
 | IBG-18  | 2   | [cac:CardAccount](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibg-18/)                 | 0..1        | A group of business terms providing information about card used for payment contemporaneous with invoice issuance. |
 | IBT-087 | 3   | [cbc:PrimaryAccountNumberID](https://docs.peppol.eu/poac/aunz/pint-aunz/trn-invoice/semantic-model/ibt-087/)      | 1..1        | The Primary Account Number (PAN) of the card used for payment. In accordance with card payments security standards, an invoice should never include a full card primary account number. |
@@ -328,50 +328,37 @@ customer reference number to facilitate the transaction.
 The following example demonstrates how the PINT A-NZ data model can be
 used to map BPAY details.
 
-|  |  |
-|----|----|
-| PaymentMeans |  |
-| PaymentMeans/PaymentMeansCode | 30 |
-| PaymentMeans/PaymentMeansCode/@name | Credit transfer |
-| PaymentMeans/PaymentID | 1000000001 *(customer/payment reference number)* |
-| PaymentMeans/PayeeFinancialAccount/ID | 12345 *(biller code)* |
-| PaymentMeans/PayeeFinancialAccount/Name | ABC Ltd. |
-| PaymentMeans/PayeeFinancialAccount/FinancialInstitutionBranch/ID | BPAY\* |
+| **PaymentMeans**                                                  |                                                                      |
+|:------------------------------------------------------------------|:---------------------------------------------------------------------|
+| **PaymentMeans/PaymentMeansCode**                                 | 30                                                                   |
+| **PaymentMeans/PaymentMeansCode/@name**                           | Credit transfer                                                      |
+| **PaymentMeans/PaymentID**                                        | 1000000001 *(customer/payment reference number)*                     |
+| **PaymentMeans/PayeeFinancialAccount/ID**                         | 12345 *(biller code)*                                                |
+| **PaymentMeans/PayeeFinancialAccount/Name**                       | ABC Ltd.                                                             |
+| **PaymentMeans/PayeeFinancialAccount/FinancialInstitutionBranch/ID** | BPAY\*                                                             |
 
 \*The sender should specify “BPAY” in the
 “…FinancialInstitutionBranch/ID” field to enable automation for the
 buyer.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr>
-<th><p>&lt;cac:PaymentMeans&gt;&lt;!-- BPay --&gt;</p>
-<blockquote>
-<p>&lt;cbc:PaymentMeansCode name="Credit
-transfer"&gt;30&lt;/cbc:PaymentMeansCode&gt;</p>
-<p>&lt;cbc:PaymentID&gt;1000000001&lt;/cbc:PaymentID&gt;&lt;!-- Customer
-reference number (CRN) --&gt;</p>
-<p>&lt;cac:PayeeFinancialAccount&gt;</p>
-<p>&lt;cbc:ID&gt;12345&lt;/cbc:ID&gt;&lt;!-- Biller code --&gt;</p>
-<p>&lt;cbc:Name&gt;ABC Ltd.&lt;/cbc:Name&gt;&lt;!-- Account name
---&gt;</p>
-<p>&lt;cac:FinancialInstitutionBranch&gt;</p>
-<p>&lt;cbc:ID&gt;BPAY&lt;/cbc:ID&gt;&lt;!-- Name of payment channel
---&gt;</p>
-<p>&lt;/cac:FinancialInstitutionBranch&gt;</p>
-<p>&lt;/cac:PayeeFinancialAccount&gt;</p>
-</blockquote>
-<p>&lt;/cac:PaymentMeans&gt;</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 
-#### Post Billpay
+```xml
+<cac:PaymentMeans> <!-- BPay -->
+  <cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
+  <cbc:PaymentID>1000000001</cbc:PaymentID> <!-- Customer reference number (CRN) -->
+  <cac:PayeeFinancialAccount>
+    <cbc:ID>12345</cbc:ID> <!-- Biller code -->
+    <cbc:Name>ABC Ltd.</cbc:Name> <!-- Account name -->
+    <cac:FinancialInstitutionBranch>
+      <cbc:ID>BPAY</cbc:ID> <!-- Name of payment channel -->
+    </cac:FinancialInstitutionBranch>
+  </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+```
+
+---
+
+## Post Billpay
 
 Post Billpay is a service provided by Australia Post which allows the
 payment of a bill at any Australia Post outlet.
@@ -380,84 +367,61 @@ The following example demonstrates how the PINT A-NZ data model can be
 used to map the required Post Billpay attributes, specifically the
 biller code and the customer reference number.
 
-|  |  |
-|----|----|
-| PaymentMeans |  |
-| PaymentMeans/PaymentMeansCode | 30 |
-| PaymentMeans/PaymentMeansCode/@name | Credit transfer |
-| PaymentMeans/PaymentID | 10354223016196642 *(customer/payment reference number (CRN))* |
-| PaymentMeans/PayeeFinancialAccount/ID | 4041 *(biller code)* |
-| PaymentMeans/PayeeFinancialAccount/Name | ABC Ltd. |
-| PaymentMeans/PayeeFinancialAccount/FinancialInstitutionBranch/ID | Post BillPay\* |
+| **PaymentMeans**                                                  |                                                                      |
+|:------------------------------------------------------------------|:---------------------------------------------------------------------|
+| **PaymentMeans/PaymentMeansCode**                                 | 30                                                                   |
+| **PaymentMeans/PaymentMeansCode/@name**                           | Credit transfer                                                      |
+| **PaymentMeans/PaymentID**                                        | 10354223016196642 *(customer/payment reference number (CRN))*        |
+| **PaymentMeans/PayeeFinancialAccount/ID**                         | 4041 *(biller code)*                                                 |
+| **PaymentMeans/PayeeFinancialAccount/Name**                       | ABC Ltd.                                                             |
+| **PaymentMeans/PayeeFinancialAccount/FinancialInstitutionBranch/ID** | Post BillPay\*                                                    |
 
 \*The sender should specify “Post BillPay” in the
 “…FinancialInstitutionBranch/ID” field to enable automation for the
 buyer.
 
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<thead>
-<tr>
-<th><p>&lt;cac:PaymentMeans&gt;&lt;!-- Post Billpay --&gt;</p>
-<blockquote>
-<p>&lt;cbc:PaymentMeansCode name="Credit
-transfer"&gt;30&lt;/cbc:PaymentMeansCode&gt;</p>
-<p>&lt;cbc:PaymentID&gt;10354223016196642&lt;/cbc:PaymentID&gt;&lt;!--
-customer reference number --&gt;</p>
-<p>&lt;cac:PayeeFinancialAccount&gt;</p>
-<p>&lt;cbc:ID&gt;4041&lt;/cbc:ID&gt;&lt;!-- Biller code --&gt;</p>
-<p>&lt;cbc:Name&gt;ABC Ltd.&lt;/cbc:Name&gt;&lt;!-- Account name
---&gt;</p>
-<p>&lt;cac:FinancialInstitutionBranch&gt;</p>
-<p>&lt;cbc:ID&gt;Post Billpay&lt;/cbc:ID&gt;&lt;!-- Name of payment
-channel --&gt;</p>
-<p>&lt;/cac:FinancialInstitutionBranch&gt;</p>
-<p>&lt;/cac:PayeeFinancialAccount&gt;</p>
-</blockquote>
-<p>&lt;/cac:PaymentMeans&gt;</p></th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
 
-#### Credit card
+```xml
+<cac:PaymentMeans> <!-- Post Billpay -->
+  <cbc:PaymentMeansCode name="Credit transfer">30</cbc:PaymentMeansCode>
+  <cbc:PaymentID>10354223016196642</cbc:PaymentID> <!-- customer reference number -->
+  <cac:PayeeFinancialAccount>
+    <cbc:ID>4041</cbc:ID> <!-- Biller code -->
+    <cbc:Name>ABC Ltd.</cbc:Name> <!-- Account name -->
+    <cac:FinancialInstitutionBranch>
+      <cbc:ID>Post Billpay</cbc:ID> <!-- Name of payment channel -->
+    </cac:FinancialInstitutionBranch>
+  </cac:PayeeFinancialAccount>
+</cac:PaymentMeans>
+```
+
+---
+
+## Credit card
 
 The following example demonstrates how the PINT A-NZ data model can be
 used to map Credit card payment details.
 
-|  |  |
-|----|----|
-| PaymentMeans |  |
-| PaymentMeans/PaymentMeansCode | 54 |
-| PaymentMeans/PaymentMeansCode/@name | Credit card |
-| PaymentMeans/PaymentID | 9387439 *(customer/payment reference number (CRN))* |
-| PaymentMeans/CardAccount/PrimaryAccountNumberID | 3236 *(Last 4 digits of payment card number)* |
-| PaymentMeans/CardAccount/NetworkID | (*Syntax required element only. Use value NA*) |
-| PaymentMeans/CardAccount/HolderName | Card holders name |
+| **PaymentMeans**                                                  |                                                                      |
+|:------------------------------------------------------------------|:---------------------------------------------------------------------|
+| **PaymentMeans/PaymentMeansCode**                                 | 54                                                                   |
+| **PaymentMeans/PaymentMeansCode/@name**                           | Credit card                                                          |
+| **PaymentMeans/PaymentID**                                        | 9387439 *(customer/payment reference number (CRN))*                  |
+| **PaymentMeans/CardAccount/PrimaryAccountNumberID**               | 3236 *(Last 4 digits of payment card number)*                        |
+| **PaymentMeans/CardAccount/NetworkID**                            | *(Syntax required element only. Use value NA)*                       |
+| **PaymentMeans/CardAccount/HolderName**                           | Card holders name                                                    |
 
-**  **
-
-\<cac:PaymentMeans\>\<!-- Credit card --\>
-
-\<cbc:PaymentMeansCode name="Credit card"\>54\</cbc:PaymentMeansCode\>
-
-\<cbc:PaymentID\>9387439\</cbc:PaymentID\>\<!-- customer reference
-number --\>
-
-\<cac:CardAccount\>
-
-> \<cbc:PrimaryAccountNumberID\>3236\</cbc:PrimaryAccountNumberID\>\<!--
-> Payment card number --\>
->
-> \<cbc:NetworkID\>NA\</cbc:NetworkID\>  
-> \<cbc:HolderName\>Card holders name\</cbc:HolderName\>
-
-\</cac:CardAccount\>
-
-\</cac:PaymentMeans\>
+```xml
+<cac:PaymentMeans> <!-- Credit card -->
+  <cbc:PaymentMeansCode name="Credit card">54</cbc:PaymentMeansCode>
+  <cbc:PaymentID>9387439</cbc:PaymentID> <!-- customer reference number -->
+  <cac:CardAccount>
+    <cbc:PrimaryAccountNumberID>3236</cbc:PrimaryAccountNumberID> <!-- Payment card number -->
+    <cbc:NetworkID>NA</cbc:NetworkID>
+    <cbc:HolderName>Card holders name</cbc:HolderName>
+  </cac:CardAccount>
+</cac:PaymentMeans>
+```
 
 **Note: Only the last 4 digits** of a credit card number should be
 provided in the
@@ -471,8 +435,9 @@ a Syntax element only and not mapped to a business term. The value ‘NA’
 should be used.
 
 #### 
+---
 
-#### Version history
+## Version history
 
 <table>
 <colgroup>
