@@ -59,7 +59,7 @@ In the context of this guidance note, a 'Document' refers to a business document
 
 For example, the [A-NZ invoice specification](https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0) has:
 
-`cbc:CustomizationID`      `urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0`
+`cbc:CustomizationID`  `urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0`
 
 The [Peppol International (PINT) A-NZ Billing specification](https://docs.peppol.eu/poac/aunz/) has:
  
@@ -162,7 +162,7 @@ Please refer to the Peppol eDelivery network [guidance and specification documen
 
 ---
 
-## Document Type Identifier
+### Document Type Identifier
 
 Document profiles are required for the transmission of inbound and outbound transactions via the Peppol network.  
 A document profile consists of a document identifier and a process profile.  
@@ -175,7 +175,10 @@ A receiver needs to be registered on the SMP with receiving capabilities for Inv
 in order to receive both document types as different identifiers are used in the AS4/SBDH namespace and doc-type  
 for an invoice/credit note. (*Highlighted below*).
 
-**Credit Note specific identifier**  
+---
+
+### Credit Note specific identifier
+
 **namespace:** document element namespace URI  
 `urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2`
 
@@ -252,7 +255,7 @@ identifier, a tax registration / status identifier, and an end point ID.
 
 ---
 
-#### Legal identifiers
+### Legal identifiers
 
 For Australian and New Zealand entities, ABN and NZBN must be used as
 the primary identifier for identifying the seller or buyer's legal
@@ -272,7 +275,7 @@ in Australia or New Zealand.
 
 ---
 
-#### Tax identifiers
+### Tax identifiers
 
 When issuing a tax invoice, Australian entities should use their ABN as
 their tax identifier unless making a taxable sale from a branch that is
@@ -286,7 +289,7 @@ the value.
 
 ---
 
-#### Party and participant identifiers within Peppol documents
+### Party and participant identifiers within Peppol documents
 
 The PINT A-NZ specification syntax provides multiple elements for party identification purposes. To maximise automation, the following recommendations should be followed:
 
@@ -375,8 +378,7 @@ Recommendation:
 
 ## Open Issues
 
-**Identifying sub-entities or branches within a legal business entity in
-SMP**
+### Identifying sub-entities or branches within a legal business entity in SMP
 
 The current Peppol framework allows only one SMP record per business
 identifier/document relationship (e.g. each unique business identifier
@@ -417,7 +419,7 @@ to inform the design of the solution.
 
 ## Wildcard Scheme changes
 
-**Wildcard Scheme**
+### Wildcard Scheme
 
 The wildcard document type identifer scheme (DTIS), introduced in
 version 4.2 of the Peppol Policy for Use of Identifiers, become
@@ -563,4 +565,10 @@ Note that for consistency with the [Peppol EDN Business Message Envelope (SBDH)]
 
 ---
 
+# References
+
+
+
+
+**Version history**
 
