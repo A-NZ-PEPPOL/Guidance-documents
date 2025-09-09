@@ -56,13 +56,14 @@ In accordance with the [Peppol policy for use of identifiers](https://docs.peppo
 In the context of this guidance note, a 'Document' refers to a business document, for example an invoice, which is specified by a relevant Peppol [Business Interoperability Specification (BIS)](https://peppol.org/documentation/technical-documentation/post-award-documentation/) based on UBL and is sometimes referred to as the 'message payload'. A BIS specifies the value for the document type in *cbc:CustomizationID*.
 
 For example, the [A-NZ invoice specification](https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0) has:
-| cbc:CustomizationID | urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0 |
-|---------------------|------------------------------------------------------------------------------------------------|
+
+| **cbc:CustomizationID** | **urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0** |
+|-------------------------|----------------------------------------------------------------------------------------------------|
 
 The [Peppol International (PINT) A-NZ Billing specification](https://docs.peppol.eu/poac/aunz/) has:
-| cbc:CustomizationID | urn:peppol:pint:billing-1@aunz-1 |
-|---------------------|----------------------------------|
 
+| **cbc:CustomizationID** | **urn:peppol:pint:billing-1@aunz-1** |
+|-------------------------|--------------------------------------|
 
 
 ### Process
