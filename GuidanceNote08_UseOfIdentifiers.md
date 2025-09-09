@@ -51,20 +51,21 @@ Peppol documentation also specifies the construct of identifiers for defined bus
 
 In accordance with the [Peppol policy for use of identifiers](https://docs.peppol.eu/edelivery/), this guidance note uses the term 'Participant' to refer to an entity that participates in the eDelivery network, and uses the term 'Party' to refer to a business entity referred to in business documents.
 
+---
+
 ### Document
 
 In the context of this guidance note, a 'Document' refers to a business document, for example an invoice, which is specified by a relevant Peppol [Business Interoperability Specification (BIS)](https://peppol.org/documentation/technical-documentation/post-award-documentation/) based on UBL and is sometimes referred to as the 'message payload'. A BIS specifies the value for the document type in *cbc:CustomizationID*.
 
 For example, the [A-NZ invoice specification](https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0) has:
 
-| **cbc:CustomizationID** | **urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0** |
-|-------------------------|----------------------------------------------------------------------------------------------------|
+`cbc:CustomizationID`      `urn:cen.eu:en16931:2017#conformant#urn:fdc:peppol.eu:2017:poacc:billing:international:aunz:3.0`
 
 The [Peppol International (PINT) A-NZ Billing specification](https://docs.peppol.eu/poac/aunz/) has:
+ 
+`cbc:CustomizationID`      `urn:peppol:pint:billing-1@aunz-1`
 
-| **cbc:CustomizationID** | **urn:peppol:pint:billing-1@aunz-1** |
-|-------------------------|--------------------------------------|
-
+---
 
 ### Process
 
@@ -77,14 +78,13 @@ A BIS specifies the value for the Process type in *cbc:ProfileID*.
 For example, the [A-NZ invoice specification](https://github.com/A-NZ-PEPPOL/A-NZ-PEPPOL-BIS-3.0) has:
 
 
-| cbc:ProfileID | urn:fdc:peppol.eu:2017:poacc:billing:01:1.0 |
-|---------------|---------------------------------------------|
+`cbc:ProfileID`  `urn:fdc:peppol.eu:2017:poacc:billing:01:1.0`
+
 
 The [PINT A-NZ Billing specification](https://docs.peppol.eu/poac/aunz/) has:
 
 
-| cbc:ProfileID | urn:peppol:bis:billing |
-|---------------|------------------------|
+`cbc:ProfileID`    `urn:peppol:bis:billing`
 
 
 ---
@@ -103,6 +103,8 @@ Identifiers used in each layer are discussed in the following sections.
 
 Importantly, there is a relationship between AS4, SBDH and UBL (document/payload). These are shown in the two tables below, followed by descriptions of the terms. Note that the SBDH scope is repeated at least twice - once for Document type and once for Process, and these are each described in the tables below.
 
+---
+
 ### Document type
 
 The AS4 Action, SBDH Scope (document type identifier) and UBL CustomizationID are aligned as follows:
@@ -112,6 +114,8 @@ The AS4 Action, SBDH Scope (document type identifier) and UBL CustomizationID ar
 | AS4            | Action             | {scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}   |
 | SBDH (Document type scope block) | Type <br> InstanceIdentifier <br> Identifier | DOCUMENTID<br>{namespace}::{doc-type}##{CustomizationID}::{version}<br>{scheme} |
 | Document (UBL) | CustomizationID    | {CustomizationID}                                                |
+
+---
 
 ### Process
 
