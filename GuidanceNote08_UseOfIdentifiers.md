@@ -209,46 +209,96 @@ Both the AS4 and the SBDH components need to identify relevant participants/part
     <tr>
       <th></th>
       <th></th>
-      <th><strong>AS4</strong></th>
+      <th colspan="3"><strong>AS4</strong></th>
       <th><strong>SBDH</strong></th>
     </tr>
   </thead>
   <tbody>
+    <!-- Participant Access Points -->
+    <tr>
+      <td rowspan="4"><strong>Participant Access Points</strong><br>(Corners 2 and 3 in a 4-corner topology)</td>
+      <td>Field</td>
+      <td colspan="3"><code>eb:To and eb:From</code></td>
+      <td>NA</td>
+    </tr>
+    <tr>
+      <td>Identifier</td>
+      <td colspan="3"><code>AP certificate</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Party.type</td>
+      <td colspan="3"><code>urn:fdc:peppol.eu:2017:identifiers:ap</code></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Reference</td>
+      <td colspan="3">Section 4.5, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a></td>
+      <td></td>
+    </tr>
+
+    <!-- Participant Business Entities -->
+    <tr>
+      <td rowspan="5"><strong>Participant Business Entities</strong><br>(Corners 1 and 4 in a 4-corner topology)</td>
+      <td>Field</td>
+      <td colspan="3"><code>.../eb:Property @name = "originalSender"</code> and <code>"finalRecipient"</code></td>
+      <td>Sender/Identifier<br>Receiver/Identifier</td>
+    </tr>
+    <tr>
+      <td>Identifier</td>
+      <td colspan="3">
+        <code>XXXX:AAAAAAAA</code><br>
+        Where ‘XXXX’ is the type of participant identifier (e.g. 0088 for GLN, or 0151 for ABN), and ‘AAAAAAAA’ is the actual identifier.
+      </td>
+      <td>Same as AS4 (<code>XXXX:AAAAAAAA</code>)</td>
+    </tr>
+    <tr>
+      <td>Scheme</td>
+      <td colspan="3"><code>@type="iso6523-actorid-upis"</code></td>
+      <td><code>@Authority="iso6523-actorid-upis"</code></td>
+    </tr>
+    <tr>
+      <td>Reference</td>
+      <td colspan="3">
+        <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a><br>
+        Section 4.9, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a>
+      </td>
+      <td><a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a></td>
+    </tr>
+
+    <!-- Process (BIS) -->
     <tr>
       <td rowspan="4"><strong>Process (BIS)</strong></td>
       <td>Field</td>
-      <td><code>eb:CollaborationInfo/eb:Service</code></td>
+      <td colspan="3"><code>eb:CollaborationInfo/eb:Service</code></td>
       <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
     </tr>
     <tr>
       <td>Identifier</td>
-      <td>ProfileID defined in BIS</td>
+      <td colspan="3">ProfileID defined in BIS</td>
       <td>ProfileID defined in BIS</td>
     </tr>
     <tr>
       <td>Type</td>
-      <td><code>cenbii-procid-ubl</code></td>
+      <td colspan="3"><code>cenbii-procid-ubl</code></td>
       <td>Same as AS4 (<code>cenbii-procid-ubl</code>)</td>
     </tr>
     <tr>
       <td>Reference</td>
-      <td>
-        Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a>
-      </td>
-      <td>
-        <a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a>
-      </td>
+      <td colspan="3">Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a></td>
+      <td><a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a></td>
     </tr>
 
+    <!-- Document (BIS) -->
     <tr>
       <td rowspan="4"><strong>Document (BIS)</strong></td>
       <td>Field</td>
-      <td><code>eb:CollaborationInfo/eb:Action</code></td>
+      <td colspan="3"><code>eb:CollaborationInfo/eb:Action</code></td>
       <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
     </tr>
     <tr>
       <td>Identifier</td>
-      <td>
+      <td colspan="3">
         <code>«scheme»::«document type id value»</code><br>
         i.e. <code>{scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}</code>
       </td>
@@ -259,12 +309,12 @@ Both the AS4 and the SBDH components need to identify relevant participants/part
     </tr>
     <tr>
       <td>Scheme</td>
-      <td><code>busdox-docid-qns</code></td>
+      <td colspan="3"><code>busdox-docid-qns</code></td>
       <td>Same as AS4</td>
     </tr>
     <tr>
       <td>Reference</td>
-      <td>
+      <td colspan="3">
         Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a><br>
         Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
       </td>
@@ -274,15 +324,16 @@ Both the AS4 and the SBDH components need to identify relevant participants/part
       </td>
     </tr>
 
+    <!-- Document (BIS) - wildcard -->
     <tr>
       <td rowspan="4"><strong>Document (BIS)</strong></td>
       <td>Field</td>
-      <td><code>eb:CollaborationInfo/eb:Action</code></td>
+      <td colspan="3"><code>eb:CollaborationInfo/eb:Action</code></td>
       <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
     </tr>
     <tr>
       <td>Identifier</td>
-      <td>
+      <td colspan="3">
         <code>«scheme»::«document type id value»</code><br>
         i.e. <code>{scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}</code>
       </td>
@@ -293,12 +344,12 @@ Both the AS4 and the SBDH components need to identify relevant participants/part
     </tr>
     <tr>
       <td>Scheme</td>
-      <td><code>peppol-doctype-wildcard</code></td>
+      <td colspan="3"><code>peppol-doctype-wildcard</code></td>
       <td>Same as AS4</td>
     </tr>
     <tr>
       <td>Reference</td>
-      <td>
+      <td colspan="3">
         Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a><br>
         Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
       </td>
