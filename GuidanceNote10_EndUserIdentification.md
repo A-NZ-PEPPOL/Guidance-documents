@@ -1,5 +1,5 @@
 ---
-title: GN1_Including WET and LCT on an Invoice
+title: GN10_End User Identification
 ---
 
 <p align="center">
@@ -189,35 +189,36 @@ iii. Legal address, country, and territory (**Mandatory**)
 | NZBN:          | Validation of the NZBN via the NZBNR will satisfy this requirement. |
 
 
-### iv. Peppol Dataset Type(s) (**Mandatory**)
+iv. Peppol Dataset Type(s) (**Mandatory**)
 
 | **Identifier** | **Requirement**                                                                 |
 |----------------|----------------------------------------------------------------------------------|
 | All            | SPs must ensure that the information on the End User's ability to receive Peppol Dataset Type(s) is collected before the SP registers them with that capability. |
 
-### v. Identifiers (**Mandatory**)
+v. Identifiers (**Mandatory**)
 
 | **Identifier** | **Requirement**                                                                 |
 |----------------|----------------------------------------------------------------------------------|
 | All            | SPs must ensure the trading name or legal name is known for each Peppol identifier that they provide Peppol services to. |
 
-### vi. Contact Information (**Mandatory**)
+vi. Contact Information (**Mandatory**)
 
 | **Identifier** | **Requirement**                                                                 |
 |----------------|----------------------------------------------------------------------------------|
 | All            | SPs must ensure that valid client contact details have been collected for the End User, including a confirmed email and phone number. |
 
-### vii. Proof of Ownership (**Recommended**)
+vii. Proof of Ownership (**Recommended**)
 
 | **Identifier** | **Requirement**                                                                 |
 |----------------|----------------------------------------------------------------------------------|
 | All            | SPs should ensure reasonable efforts have been made to establish that the information has been provided by the entity.<br><br>Possible options include:<br><br> - Information from other authorisation processes or evidence of existing business activity (e.g. ATO, [Cloud Authentication and Authorisation (CAA)](https://softwaredevelopers.ato.gov.au/Cloud_Software_Authentication_and_Authorisation), bank, tax agent, utility bills, rates bills)<br><br> - Communication via the entity's email address<br><br> - Confirmation via telephone number matching details on the entity's official website<br><br> - Confirmation against information from a public register to identify listed office holders of the entity (e.g., ASIC registers in Australia, Companies Register in New Zealand) |
 
-### viii. Intermediaries (**Mandatory**)
+viii. Intermediaries (**Mandatory**)
 
 | **Identifier** | **Requirement**                                                                 |
 |----------------|----------------------------------------------------------------------------------|
 | All            | SPs must collect information on any intermediaries used by the End User to access the Peppol Network.<br><br>The SP must ensure that the legal identifier, legal name, and country of these intermediaries is verified. |
+
 4.  Re-verify/check End User identification information annually
     (**Mandatory**)
 
@@ -228,24 +229,18 @@ iii. Legal address, country, and territory (**Mandatory**)
 > information* (requirement 3) are re-verified/checked on an annual
 > basis.
 
+---
+
 ### Migration Plan
 
-+---------------------------------+--------------+--------------+--------------+
-| Guidance notes                  | *Before*     | *After*      | *After*      |
-|                                 |              |              |              |
-|                                 | *01/07/2022* | *01/07/2022* | *01/01/2023* |
-+=================================+==============+==============+==============+
-| 04 Know your customer guidance  | Mandatory    | Mandatory    | Phased out   |
-| note                            |              |              |              |
-+---------------------------------+--------------+--------------+--------------+
-| 05 ABN Validation guidance note | Mandatory    | Mandatory    | Phased out   |
-+---------------------------------+--------------+--------------+--------------+
-| 06 NZBN Validation guidance     | Mandatory    | Mandatory    | Phased out   |
-| note                            |              |              |              |
-+---------------------------------+--------------+--------------+--------------+
-| 10 End User Identification      | Optional     | Optional     | Mandatory    |
-| guidance note                   |              |              |              |
-+---------------------------------+--------------+--------------+--------------+
+| Guidance Notes                            | Before 01/07/2022 | After 01/07/2022 | After 01/01/2023 |
+|------------------------------------------|-------------------|------------------|------------------|
+| 04 Know your customer guidance note      | Mandatory         | Mandatory        | Phased out       |
+| 05 ABN Validation guidance note          | Mandatory         | Mandatory        | Phased out       |
+| 06 NZBN Validation guidance note         | Mandatory         | Mandatory        | Phased out       |
+| 10 End User Identification guidance note | Optional          | Optional         | Mandatory        |
+
+---
 
 ## Further information
 
@@ -278,14 +273,15 @@ may provide useful information on best practice.
   (Guideline for accountants for complying with the *Anti-Money
   Laundering and Countering Financing of Terrorism Act 2009*)
 
+---
+
 ### Version history
 
-  ---------------------------------------------------------------------------
-  **Version**   **Date**            **Change**
-  ------------- ------------------- -----------------------------------------
-  1.0           10 June 2022        Initial published version
+| Version | Date          | Change                  |
+|---------|---------------|--------------------------|
+| 1.0     | 10 June 2022  | Initial published version |
 
-  ---------------------------------------------------------------------------
+---
 
 [^1]: [An Introduction to the Global Location Number (GLN)
     (gs1us.org)](https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?Command=Core_Download&EntryId=158&language=en-US&PortalId=0&TabId=134)
