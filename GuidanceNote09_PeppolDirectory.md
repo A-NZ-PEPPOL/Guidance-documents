@@ -1,5 +1,5 @@
 ---
-title: GN9_Peppol Directory
+title: GN09_Peppol Directory
 ---
 
 <p align="center">
