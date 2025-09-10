@@ -1,5 +1,5 @@
 ---
-title: "GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers"
+title: "GN03_A-NZ Information Security Guidance for e-Invoicing Service Providers"
 layout: default
 ---
 
