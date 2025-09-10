@@ -1,5 +1,5 @@
 ---
-title: GN1_Including WET and LCT on an Invoice
+title: GN01_Including WET and LCT on an Invoice
 ---
 
 <p align="center">
