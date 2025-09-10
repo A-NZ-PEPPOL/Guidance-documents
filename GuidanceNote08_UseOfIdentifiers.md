@@ -1,5 +1,5 @@
 ---
-title: GN8_Peppol Participant, Party, Process and Document Identifiers
+title: GN08_Peppol Participant, Party, Process and Document Identifiers
 ---
 
 <p align="center">
