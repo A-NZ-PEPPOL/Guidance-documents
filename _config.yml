@@ -14,6 +14,20 @@ just_the_docs:
 
 # Navigation (will show in sidebar/top depending on theme)
 
+
+collections:
+    guidance_notes:
+      output: true
+      permalink: /:collection/:path/
+      order:
+        - GuidanceNote01_WETandLCT.md
+        - GuidanceNote02_Payment_Means_Code.md
+        - GuidanceNote03_Information_Security.md
+        - GuidanceNote04_Know_Your_Customer.md
+        - GuidanceNote08_UseOfIdentifiers.md
+        - GuidanceNote09_PeppolDirectory.md
+        - GuidanceNote10_EndUserIdent.md
+
 nav:
   - Home: README.md
   - GN1_Including WET and LCT on an Invoice: GuidanceNote01_WETandLCT.md
