@@ -16,8 +16,19 @@ just_the_docs:
 nav:
   - title: Home
     url: /
-  - title: Guidance Note 1
+  - title: GN1_Including WET and LCT on an Invoice
     url: /GuidanceNote01_WETandLCT
   - title: GN2_Payment means and use of the UNCL4461 code list
     url: /GuidanceNote02_PaymentMeans
-    
+    - title: GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers
+    url: /GuidanceNote03_Information Security
+  - title: GN4_Know Your Customer
+    url: /GuidanceNote04_Know_Your_Customer
+- title: Guidance Note 1
+    url: /GuidanceNote01_WETandLCT
+  - title: GN8_Peppol Participant, Party, Process and Document Identifiers
+    url: /GuidanceNote08_UseOfIdentifiers
+ - title: GN9_Peppol Directory
+    url: /GuidanceNote09_PeppolDirectory
+  - title: GN10_End User Identification
+    url: /GuidanceNote10_EndUserIdentification
