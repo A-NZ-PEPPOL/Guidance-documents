@@ -15,7 +15,7 @@ just_the_docs:
 # Navigation (will show in sidebar/top depending on theme)
 
 nav:
-  - Home: index.md
+  - Home: README.md
   - GN1_Including WET and LCT on an Invoice: GuidanceNote01_WETandLCT.md
   - GN2_Payment means and use of the UNCL4461 code list: GuidanceNote02_Payment_Means_Code.md
   - GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers: GuidanceNote03_Information_Security.md
