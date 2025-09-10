@@ -13,6 +13,7 @@ just_the_docs:
     - assets/css/custom.css
 
 # Navigation (will show in sidebar/top depending on theme)
+
 nav:
   - title: Home
     url: /
@@ -20,13 +21,13 @@ nav:
     url: /GuidanceNote01_WETandLCT
   - title: GN2_Payment means and use of the UNCL4461 code list
     url: /GuidanceNote02_Payment_Means_Code
-    - title: GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers
+  - title: GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers
     url: /GuidanceNote03_Information_Security
   - title: GN4_Know_Your_Customer
     url: /GuidanceNote04_Know_Your_Customer
   - title: GN8_Peppol Participant, Party, Process and Document Identifiers
     url: /GuidanceNote08_UseOfIdentifiers
- - title: GN9_Peppol Directory
+  - title: GN9_Peppol Directory
     url: /GuidanceNote09_PeppolDirectory
   - title: GN10_End User Identification
-    url: /GuidanceNote10_EndUserIdentification
+    url: /GuidanceNote10_EndUserIdent
