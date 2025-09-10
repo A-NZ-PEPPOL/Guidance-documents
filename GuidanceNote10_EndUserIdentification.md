@@ -219,15 +219,14 @@ viii. Intermediaries (**Mandatory**)
 |----------------|----------------------------------------------------------------------------------|
 | All            | SPs must collect information on any intermediaries used by the End User to access the Peppol Network.<br><br>The SP must ensure that the legal identifier, legal name, and country of these intermediaries is verified. |
 
-4.  Re-verify/check End User identification information annually
-    (**Mandatory**)
+4.  Re-verify/check End User identification information annually (**Mandatory**)
 
-> [*3.3.1 of Internal
-> Regulations*](https://openpeppol.atlassian.net/wiki/spaces/AF/pages/2756771841/New+Peppol+Agreements+and+accompanying+documents#B2.-Internal-Regulations-on-the-Use-of-the-Peppol-Network)
->
-> SPs must ensure that items under *Collect and verify End User
-> information* (requirement 3) are re-verified/checked on an annual
-> basis.
+ [*3.3.1 of Internal
+ Regulations*](https://openpeppol.atlassian.net/wiki/spaces/AF/pages/2756771841/New+Peppol+Agreements+and+accompanying+documents#B2.-Internal-Regulations-on-the-Use-of-the-Peppol-Network)
+
+ SPs must ensure that items under *Collect and verify End User
+ information* (requirement 3) are re-verified/checked on an annual
+ basis.
 
 ---
 
