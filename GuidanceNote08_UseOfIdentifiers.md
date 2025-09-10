@@ -725,8 +725,23 @@ Note that for consistency with the [Peppol EDN Business Message Envelope (SBDH)]
 
 # References
 
+| Documentation                         | Link                                                                 |
+|----------------------------------------------------|----------------------------------------------------------------------|
+| Current published Peppol eDelivery (network) specifications | <https://docs.peppol.eu/edelivery>                                  |
+| Working area for Peppol eDelivery (network) specifications | <https://github.com/OpenPEPPOL/edec-specifications>                  |
+| Peppol eDelivery ‘home page’                       | <https://peppol.eu/downloads/the-peppol-edelivery-network-specifications/> |
 
 
+---
 
-**Version history**
 
+## Version history
+
+| Version | Date             | Change                                                                 |
+|---------|------------------|------------------------------------------------------------------------|
+| 1.0     | 15 May 2020      | Initial published version                                              |
+| 1.1     | 9 September 2020 | Correction of AS4 example to reflect Section 4.9, [Peppol AS4 Profile](https://docs.peppol.eu/edelivery/as4/specification/#_service_action_and_role) and Section 4.2.6, [CEF eDelivery AS4 Specification](https://ec.europa.eu/cefdigital/wiki/display/CEFDIGITAL/eDelivery+AS4+-+1.14), supported by the xsd referenced in [Peppol AS4 Profile footnote 1](https://docs.peppol.eu/edelivery/as4/specification/#_footnotedef_1). Editorial improvements, correction of links. |
+| 1.1.1   | 10 September 2020| Corrected case for AS4 element 'From' in 2.2.2                         |
+| 1.1.2   | 21 November 2022 | Additional content for 2.1 on Credit Note specific identifier. Editorial improvements and additional content for 2.3 including new guidance on Buyer Reference/Order Reference ID and updated NZ GST number example (removal of hyphens). Additional example added to 3.2 ebMS/AS4 – Document related fields. |
+| 1.1.3   | 19 December 2023 | Additional Document type identifier scheme 'peppol-doctype-wildcard' added to 2.2.2 to support PINT A-NZ wildcard capability, and various examples expanded to show PINT A-NZ specifications. Editorial improvements, correction of links. |
+| 1.1.4   | 09 December 2024 | Updated for PINT A-NZ specifications and changes to the Document type identifier scheme 'peppol-doctype-wildcard'. Editorial changes for clarification. |
