@@ -30,11 +30,11 @@ collections:
 
 nav:
   - Home: README.md
-  - GN1_Including WET and LCT on an Invoice: GuidanceNote01_WETandLCT.md
-  - GN2_Payment means and use of the UNCL4461 code list: GuidanceNote02_Payment_Means_Code.md
-  - GN3_A-NZ Information Security Guidance for e-Invoicing Service Providers: GuidanceNote03_Information_Security.md
-  - GN4_Know_Your_Customer: GuidanceNote04_Know_Your_Customer.md
-  - GN8_Peppol Participant, Party, Process and Document Identifiers: GuidanceNote08_UseOfIdentifiers.md
-  - GN9_Peppol Directory: GuidanceNote09_PeppolDirectory.md
+  - GN01_Including WET and LCT on an Invoice: GuidanceNote01_WETandLCT.md
+  - GN02_Payment means and use of the UNCL4461 code list: GuidanceNote02_Payment_Means_Code.md
+  - GN03_A-NZ Information Security Guidance for e-Invoicing Service Providers: GuidanceNote03_Information_Security.md
+  - GN04_Know_Your_Customer: GuidanceNote04_Know_Your_Customer.md
+  - GN08_Peppol Participant, Party, Process and Document Identifiers: GuidanceNote08_UseOfIdentifiers.md
+  - GN09_Peppol Directory: GuidanceNote09_PeppolDirectory.md
   - GN10_End User Identification: GuidanceNote10_EndUserIdent.md
 
