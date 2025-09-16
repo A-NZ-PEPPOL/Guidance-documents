@@ -204,188 +204,152 @@ The identifier schemes are defined in the [Peppol policy for use of identifiers]
 
 Both the AS4 and the SBDH components need to identify relevant participants/parties and the business process and document type.
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th></th>
-      <th colspan="3"><strong>AS4</strong></th>
-      <th><strong>SBDH</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Participant Access Points -->
-    <tr>
-      <td rowspan="4"><strong>Participant Access Points</strong><br>(Corners 2 and 3 in a 4-corner topology)</td>
-      <td>Field</td>
-      <td colspan="3"><code>eb:To and eb:From</code></td>
-      <td>NA</td>
-    </tr>
-    <tr>
-      <td>Identifier</td>
-      <td colspan="3"><code>AP certificate</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Party.type</td>
-      <td colspan="3"><code>urn:fdc:peppol.eu:2017:identifiers:ap</code></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Reference</td>
-      <td colspan="3">Section 4.5, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a></td>
-      <td></td>
-    </tr>
+<table class="peppol">
+  <!-- Header -->
+  <tr>
+    <th colspan="4" style="text-align:center;">AS4</th>
+    <th style="text-align:center;">SBDH</th>
+  </tr>
 
-    <!-- Participant Business Entities -->
-    <tr>
-      <td rowspan="5"><strong>Participant Business Entities</strong><br>(Corners 1 and 4 in a 4-corner topology)</td>
-      <td>Field</td>
-      <td colspan="3"><code>.../eb:Property @name = "originalSender"</code> and <code>"finalRecipient"</code></td>
-      <td>Sender/Identifier<br>Receiver/Identifier</td>
-    </tr>
-    <tr>
-      <td>Identifier</td>
-      <td colspan="3">
-        <code>XXXX:AAAAAAAA</code><br>
-        Where ‘XXXX’ is the type of participant identifier (e.g. 0088 for GLN, or 0151 for ABN), and ‘AAAAAAAA’ is the actual identifier.
-      </td>
-      <td>Same as AS4 (<code>XXXX:AAAAAAAA</code>)</td>
-    </tr>
-    <tr>
-      <td>Scheme</td>
-      <td colspan="3"><code>@type="iso6523-actorid-upis"</code></td>
-      <td><code>@Authority="iso6523-actorid-upis"</code></td>
-    </tr>
-    <tr>
-      <td>Reference</td>
-      <td colspan="3">
-        <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a><br>
-        Section 4.9, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a>
-      </td>
-      <td><a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a></td>
-    </tr>
+  <!-- Participant Access Points -->
+  <tr>
+    <td class="category" rowspan="4">Participant Access Points<br>(Corners 2 and 3)</td>
+    <td>Field</td>
+    <td colspan="2">eb:To and eb:From</td>
+    <td>NA</td>
+  </tr>
+  <tr>
+    <td>Identifier</td>
+    <td colspan="2">AP certificate</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Party.type</td>
+    <td colspan="2">urn:fdc:peppol.eu:2017:identifiers:ap</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Reference</td>
+    <td colspan="2">Section 4.5, <a href="https://docs.peppol.eu/edelivery/as4/profile/">Peppol AS4 Profile</a></td>
+    <td></td>
+  </tr>
 
-    <!-- Process (BIS) -->
-    <tr>
-      <td rowspan="4"><strong>Process (BIS)</strong></td>
-      <td>Field</td>
-      <td colspan="3"><code>eb:CollaborationInfo/eb:Service</code></td>
-      <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
-    </tr>
-    <tr>
-      <td>Identifier</td>
-      <td colspan="3">ProfileID defined in BIS</td>
-      <td>ProfileID defined in BIS</td>
-    </tr>
-    <tr>
-      <td>Type</td>
-      <td colspan="3"><code>cenbii-procid-ubl</code></td>
-      <td>Same as AS4 (<code>cenbii-procid-ubl</code>)</td>
-    </tr>
-    <tr>
-      <td>Reference</td>
-      <td colspan="3">Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a></td>
-      <td><a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a></td>
-    </tr>
+  <!-- Participant Business Entities -->
+  <tr>
+    <td class="category" rowspan="4">Participant Business Entities<br>(Corners 1 and 4)</td>
+    <td>Field</td>
+    <td colspan="2">…/eb:Property @name="originalSender" and "finalRecipient"</td>
+    <td>Sender/Identifier<br>Receiver/Identifier</td>
+  </tr>
+  <tr>
+    <td>Identifier</td>
+    <td colspan="2">XXXX:AAAAAAAAA<br>Where <code>XXXX</code> is the type of participant identifier (e.g. 0088 for GLN, or 0151 for ABN), and <code>AAAAAAAAA</code> is the actual identifier.</td>
+    <td>Same as AS4 (XXXX:AAAAAAAAA)</td>
+  </tr>
+  <tr>
+    <td>Scheme</td>
+    <td colspan="2">@type="iso6523-actorid-upis"</td>
+    <td>@Authority="iso6523-actorid-upis"</td>
+  </tr>
+  <tr>
+    <td>Reference</td>
+    <td colspan="2"><a href="https://docs.peppol.eu/edelivery/as4/identifiers/">Peppol policy for use of identifiers</a><br>Section 4.9, <a href="https://docs.peppol.eu/edelivery/as4/profile/">Peppol AS4 Profile</a></td>
+    <td><a href="https://docs.peppol.eu/edelivery/edn/bme/">Peppol EDN Business Message Envelope (SBDH)</a></td>
+  </tr>
 
-    <!-- Document (BIS) -->
-    <tr>
-      <td rowspan="4"><strong>Document (BIS)</strong></td>
-      <td>Field</td>
-      <td colspan="3"><code>eb:CollaborationInfo/eb:Action</code></td>
-      <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
-    </tr>
-    <tr>
-      <td>Identifier</td>
-      <td colspan="3">
-        <code>«scheme»::«document type id value»</code><br>
-        i.e. <code>{scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}</code>
-      </td>
-      <td>
-        document type id value<br>
-        i.e. <code>{namespace}::{doc-type}##{CustomizationID}::{version}</code>
-      </td>
-    </tr>
-    <tr>
-      <td>Scheme</td>
-      <td colspan="3"><code>busdox-docid-qns</code></td>
-      <td>Same as AS4</td>
-    </tr>
-    <tr>
-      <td>Reference</td>
-      <td colspan="3">
-        Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a><br>
-        Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
-      </td>
-      <td>
-        <a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a><br>
-        Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
-      </td>
-    </tr>
+  <!-- Process (BIS) -->
+  <tr>
+    <td class="category" rowspan="4">Process (BIS)</td>
+    <td>Field</td>
+    <td colspan="2">eb:CollaborationInfo/eb:Service</td>
+    <td>BusinessScope/Scope/InstanceIdentifier</td>
+  </tr>
+  <tr>
+    <td>Identifier</td>
+    <td colspan="2">ProfileID defined in BIS</td>
+    <td>ProfileID defined in BIS</td>
+  </tr>
+  <tr>
+    <td>Type</td>
+    <td colspan="2">cenbii-procid-ubl</td>
+    <td>Same as AS4 (cenbii-procid-ubl)</td>
+  </tr>
+  <tr>
+    <td>Reference</td>
+    <td colspan="2">Section 4.6, <a href="https://docs.peppol.eu/edelivery/as4/profile/">Peppol AS4 Profile</a></td>
+    <td><a href="https://docs.peppol.eu/edelivery/edn/bme/">Peppol EDN Business Message Envelope (SBDH)</a></td>
+  </tr>
 
-    <!-- Document (BIS) - wildcard -->
-    <tr>
-      <td rowspan="4"><strong>Document (BIS)</strong></td>
-      <td>Field</td>
-      <td colspan="3"><code>eb:CollaborationInfo/eb:Action</code></td>
-      <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
-    </tr>
-    <tr>
-      <td>Identifier</td>
-      <td colspan="3">
-        <code>«scheme»::«document type id value»</code><br>
-        i.e. <code>{scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}</code>
-      </td>
-      <td>
-        document type id value<br>
-        i.e. <code>{namespace}::{doc-type}##{CustomizationID}::{version}</code>
-      </td>
-    </tr>
-    <tr>
-      <td>Scheme</td>
-      <td colspan="3"><code>peppol-doctype-wildcard</code></td>
-      <td>Same as AS4</td>
-    </tr>
-    <tr>
-      <td>Reference</td>
-      <td colspan="3">
-        Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a><br>
-        Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
-      </td>
-      <td>
-        <a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a><br>
-        Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
-      </td>
-    </tr>
-  </tbody>
+ <!-- Document (BIS) -->
+  <tr>
+    <td class="category" rowspan="4">Document (BIS)</td>
+    <td>Field</td>
+    <td colspan="2"><code>eb:CollaborationInfo/eb:Action</code></td>
+    <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
+  </tr>
+  <tr>
+    <td>Identifier</td>
+    <td colspan="2">
+      <code>«scheme»::«document type id value»</code><br>
+      i.e. <code>{scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}</code>
+    </td>
+    <td>
+      document type id value<br>
+      i.e. <code>{namespace}::{doc-type}##{CustomizationID}::{version}</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Scheme</td>
+    <td colspan="2"><code>busdox-docid-qns</code></td>
+    <td>Same as AS4</td>
+  </tr>
+  <tr>
+    <td>Reference</td>
+    <td colspan="2">
+      Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a><br>
+      Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
+    </td>
+    <td>
+      <a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a><br>
+      Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
+    </td>
+  </tr>
+
+  <!-- Document (BIS) Wildcard -->
+  <tr>
+    <td class="category" rowspan="4">Document (BIS)</td>
+    <td>Field</td>
+    <td colspan="2"><code>eb:CollaborationInfo/eb:Action</code></td>
+    <td><code>BusinessScope/Scope/InstanceIdentifier</code></td>
+  </tr>
+  <tr>
+    <td>Identifier</td>
+    <td colspan="2">
+      <code>«scheme»::«document type id value»</code><br>
+      i.e. <code>{scheme}::{namespace}::{doc-type}##{CustomizationID}::{version}</code>
+    </td>
+    <td>
+      document type id value<br>
+      i.e. <code>{namespace}::{doc-type}##{CustomizationID}::{version}</code>
+    </td>
+  </tr>
+  <tr>
+    <td>Scheme</td>
+    <td colspan="2"><code>peppol-doctype-wildcard</code></td>
+    <td>Same as AS4</td>
+  </tr>
+  <tr>
+    <td>Reference</td>
+    <td colspan="2">
+      Section 4.6, <a href="https://docs.peppol.eu/edelivery/">Peppol AS4 Profile</a><br>
+      Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
+    </td>
+    <td>
+      <a href="https://docs.peppol.eu/edelivery/">Peppol EDN Business Message Envelope (SBDH)</a><br>
+      Section 5, <a href="https://docs.peppol.eu/edelivery/">Peppol policy for use of identifiers</a>
+    </td>
+  </tr>
 </table>
-
-
-
-|              |              | AS4                                                                                          | SBDH                                                                                         |
-|--------------|--------------|-----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| Participant Access Points (Corners 2 and 3 in a 4-corner topology) | Field        | eb:To and eb:From                                                                             | NA                                                                                           |
-|                              | Identifier    | AP certificate                                                                                |                                                                                              |
-|                              | Party.type    | urn:fdc:peppol.eu:2017:identifiers:ap                                                         |                                                                                              |
-|                              | Reference     | Section 4.5, Peppol AS4 Profile                                                               |                                                                                              |
-| Participant Business entities accessing (corners 1 and 4 in a 4-corner topology) | Field        | …/eb:Property @name = "originalSender" and "finalRecipient"                                   | Sender/Identifier<br>Receiver/Identifier                                                     |
-|                              | Identifier    | XXXX:AAAAAAAA<br>Where ‘XXXX’ is the type of participant identifier (e.g. 0088 for GLN, or 0151 for ABN), and ‘AAAAAAAA’ is the actual identifier. | Same as AS4 (XXXX:AAAAAAAA)                                                                  |
-|                              | Scheme        | @type="iso6523-actorid-upis"                                                                  | @Authority="iso6523-actorid-upis"                                                            |
-|                              | Reference     | Peppol policy for use of identifiers<br>Section 4.9, Peppol AS4 Profile                       | Peppol EDN Business Message Envelope (SBDH)                                                  |
-| Process (BIS)                | Field        | eb:CollaborationInfo/eb:Service                                                               | BusinessScope/Scope/InstanceIdentifier                                                       |
-|                              | Identifier    | ProfileID defined in BIS                                                                      | ProfileID defined in BIS                                                                     |
-|                              | Type          | cenbii-procid-ubl                                                                             | Same as AS4 (cenbii-procid-ubl)                                                              |
-|                              | Reference     | Section 4.6, Peppol AS4 Profile                                                               | Peppol EDN Business Message Envelope (SBDH)                                                  |
-| Document (BIS)               | Field        | eb:CollaborationInfo/eb:Action                                                                | BusinessScope/Scope/InstanceIdentifier                                                       |
-|                              | Identifier    | «scheme»::«document type id value»<br>i.e. {scheme}::{namespace}::{doc-type}##{CustomizationID}::{version} | document type id value<br>i.e. {namespace}::{doc-type}##{CustomizationID}::{version}         |
-|                              | Scheme        | busdox-docid-qns                                                                              | Same as AS4                                                                                  |
-|                              | Reference     | Section 4.6, Peppol AS4 Profile<br>Section 5, Peppol policy for use of identifiers            | Peppol EDN Business Message Envelope (SBDH)<br>Section 5, Peppol policy for use of identifiers |
-| Document (BIS)               | Field        | eb:CollaborationInfo/eb:Action                                                                | BusinessScope/Scope/InstanceIdentifier                                                       |
-|                              | Identifier    | «scheme»::«document type id value»<br>i.e. {scheme}::{namespace}::{doc-type}##{CustomizationID}::{version} | document type id value<br>i.e. {namespace}::{doc-type}##{CustomizationID}::{version}         |
-|                              | Scheme        | peppol-doctype-wildcard                                                                       | Same as AS4                                                                                  |
-|                              | Reference     | Section 4.6, Peppol AS4 Profile<br>Section 5, Peppol policy for use of identifiers            | Peppol EDN Business Message Envelope (SBDH)<br>Section 5, Peppol policy for use of identifiers |
-
 
 **Refer to Section 3 for non-normative examples.**
 
