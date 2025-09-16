@@ -9,6 +9,11 @@ This site provides a set of guides to support the development of Peppol Access P
 - [Including WET and LCT on an Invoice](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote01_WETandLCT)
 - [Payment means and use of the UNCL4461 code list](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote02_Payment%20Means%20Code)
 - [A-NZ Information Security Guidance for e-Invoicing Service Providers](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote03_Information%20Security_v1.0.html)
+- [Know Your Customer (KYC)](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote04_Know_Your_Customer.html)
+- [Peppol Participant, Party, Process and Document Identifiers](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote08_UseOfIdentifiers.html)
+- [Peppol Directory](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote09_PeppolDirectory.html)
+- [End User Identification](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote10_EndUserIdentification.html)
+- [Use of Tax Category Codes in Australia](https://a-nz-peppol.github.io/Guidance-documents/GuidanceNote11_Use_of_Tax_Category_Codes.html)
 
 
 ## Feedback
