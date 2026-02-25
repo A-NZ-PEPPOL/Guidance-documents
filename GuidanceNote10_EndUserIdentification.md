@@ -58,8 +58,7 @@ A-NZ Peppol Authorities have been, and continue to, work with Service
 Providers to strengthen End User identification as the network matures.
 
 This guidance note should be read in conjunction with *Guidance Note 09
-Peppol Directory* available on
-[GitHub](https://github.com/A-NZ-PEPPOL/Guidance-documents).
+Peppol Directory*.
 
 This guidance note replaces *Guidance Note 04 Know Your Customer*,
 *Guidance Note 05 ABN Validation* and *Guidance Note 06 NZBN
