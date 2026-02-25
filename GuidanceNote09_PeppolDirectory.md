@@ -38,8 +38,7 @@ This guidance has been developed to support the accuracy of Australian
 and New Zealand data in the Peppol Directory.
 
 This guidance note should be read in conjunction with *Guidance Note 10
-End User Identification* available on
-[GitHub](https://github.com/A-NZ-PEPPOL/Guidance-documents).
+End User Identification*.
 
 ---
 
