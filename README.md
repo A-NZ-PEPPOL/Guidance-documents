@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="header.jpg" alt="Header Image" width="100%">
+  <img src="assets/header.jpg" alt="Header Image" width="100%">
 </p>
 
 # Welcome to the A-NZ Peppol Framework Guidance Hub
 
 This hub provides a set of guides to support the development of Peppol Access Points and Service Metadata Publishers in alignment with Australian and New Zealand (A-NZ) compliance requirements.
 
-The built website can be viewed [here](https://a-nz-peppol.github.io/Guidance-documents/)
+The web version of the guidance notes can be accessed at: <https://a-nz-peppol.github.io/Guidance-documents/>
 
 ### Available Guidance Documents:
 

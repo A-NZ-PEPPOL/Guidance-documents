@@ -1,0 +1,150 @@
+/* === ATO-style Custom Styling for Just the Docs === */
+
+/* Add spacing and border below header image */
+.site-header img {
+  margin-bottom: 20px;
+  border-bottom: 3px solid #004785; /* ATO-style blue */
+}
+
+/* Style page headings */
+h1, h2, h3 {
+  color: #004785; /* professional dark blue */
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid #004785;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+/* ---------- Table styling (robust for merged cells) ---------- */
+/* Ensure tables render with contiguous borders */
+.markdown-body table.bordered,
+table.bordered {
+  width: 100%;
+  border-collapse: collapse !important;   /* critical for merged cells */
+  border-spacing: 0 !important;
+  table-layout: auto;
+}
+
+/* Apply borders to every cell so merged cells draw their own edges */
+.markdown-body table.bordered th,
+.markdown-body table.bordered td,
+table.bordered th,
+table.bordered td {
+  border: 1px solid #d0d7de !important;  /* GitHub-style light grey */
+  padding: 6px 8px;
+  vertical-align: top;
+  background-color: #fff;
+}
+
+/* Restore left border on first column (theme removes it by default) */
+.markdown-body table.bordered th:first-of-type,
+.markdown-body table.bordered td:first-of-type,
+table.bordered th:first-of-type,
+table.bordered td:first-of-type {
+  border-left: 1px solid #d0d7de !important;
+}
+
+/* Header background for clarity */
+.markdown-body table.bordered thead th,
+table.bordered thead th {
+  background: #f6f8fa;
+  font-weight: 600;
+}
+
+/* Remove paragraph margins that can create “gaps” in merged cells */
+.markdown-body table.bordered td p,
+.markdown-body table.bordered th p,
+table.bordered td p,
+table.bordered th p {
+  margin: 0;
+}
+
+/* Reinforce borders on merged cells in case a theme overrides them */
+.markdown-body table.bordered td[rowspan],
+.markdown-body table.bordered th[rowspan],
+.markdown-body table.bordered td[colspan],
+.markdown-body table.bordered th[colspan],
+table.bordered td[rowspan],
+table.bordered th[rowspan],
+table.bordered td[colspan],
+table.bordered th[colspan] {
+  border: 1px solid #d0d7de !important;
+}
+
+/* Make the rowspan cell a positioning context */
+table.fix-rowspan-lines td[rowspan],
+table.fix-rowspan-lines th[rowspan] {
+  position: relative;
+}
+
+/* The “continuation” lines we inject with JS */
+table.fix-rowspan-lines td[rowspan] .rowspan-line,
+table.fix-rowspan-lines th[rowspan] .rowspan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 0;
+  border-top: 1px solid #d0d7de; /* match your table border colour */
+  pointer-events: none; /* ignore mouse events */
+}
+
+/* ---------- Sidebar styling (Just the Docs uses .side-bar) ---------- */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem; /* Push sidebar content down */
+}
+
+/* Move sidebar title down */
+.side-bar .site-title {
+  padding-top: 1rem;
+  display: block;
+}
+
+/* Move search bar to sidebar */
+.side-bar .search {
+  order: 2;
+  position: static;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+/* ATO-style link colors */
+a {
+  color: #004785;
+}
+
+a:hover {
+  color: #002d5c;
+  text-decoration: underline;
+}
+
+/* ATO-style sidebar nav */
+.nav-list .nav-list-item {
+  border-left: 3px solid #004785;
+  padding-left: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .side-bar .search {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .main-content {
+    margin-top: 2rem;
+  }
+}

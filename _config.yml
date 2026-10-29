@@ -1,0 +1,39 @@
+title: A-NZ Guidance Documents
+description: >
+  
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+sass:
+  style: expanded
+# Point to the custom CSS
+just_the_docs:
+  css:
+    - assets/css/custom.css
+
+# Navigation (will show in sidebar/top depending on theme)
+
+
+collections:
+    guidance_notes:
+      output: true
+      permalink: /:collection/:path/
+      order:
+        - GuidanceNote01_WETandLCT.md
+        - GuidanceNote02_Payment_Means_Code.md
+        - GuidanceNote03_Information_Security.md
+        - GuidanceNote04_Know_Your_Customer.md
+        - GuidanceNote08_UseOfIdentifiers.md
+        - GuidanceNote09_PeppolDirectory.md
+        - GuidanceNote10_EndUserIdent.md
+
+nav:
+  - Home: README.md
+  - GN01_Including WET and LCT on an Invoice: GuidanceNote01_WETandLCT.md
+  - GN02_Payment means and use of the UNCL4461 code list: GuidanceNote02_Payment_Means_Code.md
+  - GN03_A-NZ Information Security Guidance for e-Invoicing Service Providers: GuidanceNote03_Information_Security.md
+  - GN04_Know_Your_Customer: GuidanceNote04_Know_Your_Customer.md
+  - GN08_Peppol Participant, Party, Process and Document Identifiers: GuidanceNote08_UseOfIdentifiers.md
+  - GN09_Peppol Directory: GuidanceNote09_PeppolDirectory.md
+  - GN10_End User Identification: GuidanceNote10_EndUserIdent.md
+
